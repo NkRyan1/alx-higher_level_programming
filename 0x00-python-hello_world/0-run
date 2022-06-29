@@ -1,3 +1,3 @@
 #!/bin/bash
 BEAR_NAME= $PYFILE  python main.py
-python -c $PYFILE
+python $PYFILE

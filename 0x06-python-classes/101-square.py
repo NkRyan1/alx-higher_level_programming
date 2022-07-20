@@ -13,8 +13,8 @@ class Square:
     """Square implementation
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     def __str__(self):
 
@@ -22,11 +22,11 @@ class Square:
         if (self.__size == 0):
             pass
         else:
-            for i in range(self.position[1]):
+            for i in range(self.__position[1]):
                 txt += '\n'
 
             for i in range(self.__size):
-                txt += ' ' * self.position[0] + '#' * self.size
+                txt += ' ' * self.__position[0] + '#' * self.size
                 if i != self.__size - 1:
                     txt += '\n'
                 
@@ -47,7 +47,7 @@ class Square:
     def area(self):
         """calculates the square area
         """
-        return (self.size ** 2)
+        return (self.__size ** 2)
 
     def my_print(self):
         """prints a square  with the corresponding size
